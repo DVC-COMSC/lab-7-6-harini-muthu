@@ -17,11 +17,12 @@ def makeReverse(numbers):
     Code Your Program here
     ########################################
     """
-    reverselist = []
-    for i in range(len(numbers)):
-        reverselist.append(numbers[-i-1])
+    for i in range(len(numbers) // 2):
+        temp = numbers[i]
+        numbers[i] = numbers[-i-1]
+        numbers[-i-1] = temp
     
-    return reverselist
+    return numbers
 
 
 def main():
